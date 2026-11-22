@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff5f7;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #e85d75;
+    box-shadow: 0 2px 6px rgba(232, 93, 117, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.yazi {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.aktif {
+    background-color: #d14962;
+}
+
+.anadiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px 50px 20px;
+    gap: 25px;
+}
+
+.baslik-kutusu, .giris-kutusu {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 2px solid #ffd1dc;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(232, 93, 117, 0.08);
+    text-align: center;
+}
+
+.baslik-kutusu h1, .giris-kutusu h1 {
+    color: #c93b58;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.baslik-kutusu p, .giris-kutusu p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.kart, .balikturleri {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 2px solid #ffd1dc;
+    box-shadow: 0 2px 8px rgba(232, 93, 117, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 22px;
+    transition: 0.3s;
+}
+
+.kart:hover, .balikturleri:hover {
+    border-color: #e85d75;
+    box-shadow: 0 4px 15px rgba(232, 93, 117, 0.2);
+    
+}
+
+.resim-kutu {
+    width: 320px;
+    height: 220px;
+    background-color: #fff0f3;
+    border: 1px solid #ffd1dc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.resim-kutu:hover {
+    border-color: #e85d75;
+}
+
+.resim-kutu img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.metin {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.metin h2 {
+    color: #c93b58;
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #ffe3e8;
+}
+
+.metin p {
+    color: #444444;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
+
+.metin p:last-child {
+    margin-bottom: 0;
+}
+
+.metin strong {
+    color: #b32d48;
+}
+
+.tablo-kutusu {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.rehber-tablo {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.rehber-tablo th, .rehber-tablo td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ffe3e8;
+}
+
+.rehber-tablo th {
+    background-color: #fff0f3;
+    color: #c93b58;
+    font-weight: bold;
+}
+
+.rehber-tablo tr:hover {
+    background-color: #fffafb;
+}
+
+.buton {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #e85d75;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buton:hover {
+    background-color: #d14962;
+}
+
+@media (max-width: 800px) {
+    .kart, .balikturleri {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resim-kutu {
+        width: 100%;
+        max-width: 360px;
+        height: 220px;
+    }
+
+    .navbar-container {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
